@@ -18,10 +18,10 @@ const NotFound = React.lazy(() => import(/* webpackChunkName: "NotFound" */ './p
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route path="" element={<Home />} />
+      <Route path='/pizza-shop-v2' element={<MainLayout />}>
+        <Route path='' element={<Home />} />
         <Route
-          path="cart"
+          path='cart'
           element={
             <Suspense fallback={<div>Идёт загрузка корзины...</div>}>
               <Cart />
@@ -29,7 +29,7 @@ function App() {
           }
         />
         <Route
-          path="pizza/:id"
+          path='pizza/:id'
           element={
             <Suspense fallback={<div>Идёт загрузка...</div>}>
               <FullPizza />
@@ -37,7 +37,7 @@ function App() {
           }
         />
         <Route
-          path="*"
+          path='*'
           element={
             <Suspense fallback={<div>Идёт загрузка...</div>}>
               <NotFound />
