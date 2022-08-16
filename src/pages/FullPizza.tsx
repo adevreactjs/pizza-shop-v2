@@ -20,7 +20,7 @@ const FullPizza: React.FC = () => {
         setPizza(data);
       } catch (error) {
         alert('Ошибка при получении пиццы!');
-        navigate('/');
+        navigate('/pizza-shop-v2');
       }
     }
 
@@ -36,7 +36,7 @@ const FullPizza: React.FC = () => {
       <img src={pizza.imageUrl} />
       <h2>{pizza.title}</h2>
       <h4>{pizza.price} ₽</h4>
-      <Link to='/pizza-shop'>
+      <Link to='/pizza-shop-v2'>
         <button className='button button--outline button--add'>
           <span>Назад</span>
         </button>
