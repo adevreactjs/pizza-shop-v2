@@ -33,7 +33,11 @@ export const Header: React.FC = () => {
             </div>
           </div>
         </Link>
-        {location.pathname !== '/pizza-shop-v2/cart' && <Search />}
+        {location.pathname !== '/pizza-shop-v2/cart' && (
+          <div className='search'>
+            <Search />
+          </div>
+        )}
         <div className='header__cart'>
           {location.pathname !== '/pizza-shop-v2/cart' && (
             <Link to='/pizza-shop-v2/cart' className='button button--cart'>
